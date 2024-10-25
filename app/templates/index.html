@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/</title>
+</head>
+<body>
+    {% if current_user.is_authenticated %}
+        <form action="/" method="post">
+            <h1>_________________________________________</h1>
+            <label for="nickname">Enter your nickname</label>
+            <input type="text" name="nickname" id="nickname">
+            <button type="submit">Submit</button>
+        </form>
+    {% else %}
+    <h1>_________________________________________</h1>
+    <h1><a href="/register">Register</a></h1>
+    <h2>Sign in first!</h2>
+    {% endif %}
+    <h1>_________________________________________</h1>
+    <h2><a href="/about">About the shop</a></h2>
+    <h1>_________________________________________</h1>
+    <br>
+</body>
+</html>

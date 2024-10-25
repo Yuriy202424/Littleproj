@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/result</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Carrots</th>
+            <th>Melons</th>
+            <th>Pickles</th>
+            <th>Cost</th>
+            <th>Date</th>
+        </tr>
+        {% for pack in packed %}
+        <tr>
+            <td>{{ pack.carrots }}</td>
+            <td>{{ pack.melons }}</td>
+            <td>{{ pack.pickles }}</td>
+            <td>{{ pack.cost }}$</td>
+            <td>{{ pack.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</table>
+</body>
+</html>

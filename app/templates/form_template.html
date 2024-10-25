@@ -1,0 +1,20 @@
+{% from '__helpers.html' import form_generate %}
+
+
+<link rel="stylesheet" href="static/css/form_.css" />
+<link rel="icon" href="static/images/logo.jpeg">
+{% block content %}
+<div class="container">
+  {% with messages = get_flashed_messages() %} {% if messages %}
+  <div class="form-message">
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+  </div>
+  {% endif %} {% endwith %} {{ form_generate(form) }}
+  <p>
+    Do not have an account?
+    <a href="{{ url_for('register') }}">U can create here!</a>
+  </p>
+</div>
+{% endblock content %}
